@@ -1,0 +1,13 @@
+.notifications {
+    padding: 20px;
+  }
+  
+  .notification {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+  }
+  
+  .notification p {
+    margin: 0;
+  }
+  
