@@ -39,7 +39,7 @@ const Post = ({ p }) => {
   const handleLike = async () => {
     try {
       if (!loggedInUser) return;
-      const userId = loggedInUser._id;
+      
       if (liked) {
         setLikes((prev) => prev - 1);
       } else {
