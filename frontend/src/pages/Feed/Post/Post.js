@@ -23,7 +23,7 @@ const Post = ({ p }) => {
   useEffect(() => {
     const fetchPostStats = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/post/${_id}/stats`, {
+        const response = await axios.get(`https://twitter-clone2-0-hfe5.onrender.com/post/${_id}/stats`, {
           params: { userId: loggedInUser ? loggedInUser._id : null }
         });
         setLikes(response.data.likes);
@@ -40,7 +40,7 @@ const Post = ({ p }) => {
     try {
       if (!loggedInUser) return;
       const userId = loggedInUser._id;
-      const response = await axios.post('http://localhost:5000/like', { postId: _id, userId });
+      const response = await axios.post('https://twitter-clone2-0-hfe5.onrender.com/like', { postId: _id, userId });
       if (liked) {
         setLikes((prev) => prev - 1);
       } else {
@@ -57,7 +57,7 @@ const Post = ({ p }) => {
     if (commentText.trim()) {
       try {
         const newComment = { postId: _id, userId: loggedInUser._id, comment: commentText };
-        const response = await axios.post('http://localhost:5000/comment', newComment);
+        const response = await axios.post('https://twitter-clone2-0-hfe5.onrender.com/comment', newComment);
         setComments((prevComments) => [...prevComments, response.data.comment]);
         setCommentText('');
       } catch (error) {
