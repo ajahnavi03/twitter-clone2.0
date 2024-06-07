@@ -1,5 +1,5 @@
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:5000');
+const socket = io('https://twitter-clone2-0-hfe5.onrender.com');
 
 export default socket;
