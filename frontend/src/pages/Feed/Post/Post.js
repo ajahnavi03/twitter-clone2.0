@@ -40,7 +40,6 @@ const Post = ({ p }) => {
     try {
       if (!loggedInUser) return;
       const userId = loggedInUser._id;
-      const response = await axios.post('https://twitter-clone2-0-hfe5.onrender.com/like', { postId: _id, userId });
       if (liked) {
         setLikes((prev) => prev - 1);
       } else {
