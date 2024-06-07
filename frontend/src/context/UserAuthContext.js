@@ -10,7 +10,6 @@ import {
     signInWithPhoneNumber
 } from "firebase/auth";
 import { auth } from "../firebase.init";
-import io from 'socket.io-client';
 import socket from "../pages/SocketClient";
 
 const userAuthContext = createContext();
