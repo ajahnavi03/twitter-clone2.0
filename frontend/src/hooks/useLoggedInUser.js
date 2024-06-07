@@ -11,7 +11,7 @@ const useLoggedInUser = () => {
     useEffect(() => {
         if (email || phoneNumber) {
             const identifier = email ? `email=${email}` : `phoneNumber=${phoneNumber}`;
-            fetch(`http://localhost:5000/loggedInUser?${identifier}`)
+            fetch(`https://twitter-clone2-0-hfe5.onrender.com/loggedInUser?${identifier}`)
                 .then(res => res.json())
                 .then(data => {
                     setLoggedInUser(data);
