@@ -24,7 +24,7 @@ const Login = () => {
             await logIn(email, password);
     
             // Verify reCAPTCHA token with backend
-            const verificationResponse = await fetch('http://localhost:5000/verify-recaptcha', {
+            const verificationResponse = await fetch('https://twitter-clone2-0-hfe5.onrender.com/verify-recaptcha', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
