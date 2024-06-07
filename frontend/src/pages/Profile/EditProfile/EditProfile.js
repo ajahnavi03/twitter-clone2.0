@@ -82,7 +82,7 @@ export default function EditProfile({ user, loggedInUser }) {
       dob,
     };
     axios
-      .patch(`http://localhost:5000/userUpdates/${user?.email}`, editedInfo)
+      .patch(`https://twitter-clone2-0-hfe5.onrender.com/userUpdates/${user?.email}`, editedInfo)
       .then(() => {
         setOpen(false);
       })
