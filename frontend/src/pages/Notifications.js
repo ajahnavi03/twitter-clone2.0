@@ -1,6 +1,6 @@
 import React from 'react';
 import './Notifications.css';
-import SocketClient from './SocketClient';
+
 
 const Notifications = ({ type, username, content }) => {
     let message;
