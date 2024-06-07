@@ -23,7 +23,7 @@ function TweetBox() {
         if (isDataFetched) {
             // Data is fetched, set name and username accordingly
             if (user?.providerData[0]?.providerId === 'password') {
-                fetch(`http://localhost:5000/loggedInUser?email=${email}`)
+                fetch(`https://twitter-clone2-0-hfe5.onrender.com/loggedInUser?email=${email}`)
                     .then(res => res.json())
                     .then(data => {
                         setName(data[0]?.name);
@@ -72,7 +72,7 @@ function TweetBox() {
             console.log(userPost);
             setPost('');
             setImageURL('');
-            fetch(`http://localhost:5000/post`, {
+            fetch(`https://twitter-clone2-0-hfe5.onrender.com/post`, {
                 method: "POST",
                 headers: {
                     'content-type': 'application/json'
