@@ -18,7 +18,7 @@ const MainPage = ({ user }) => {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/userPost?email=${user?.email || user?.phoneNumber}`)
+        fetch(`https://twitter-clone2-0-hfe5.onrender.com/userPost?email=${user?.email || user?.phoneNumber}`)
             .then(res => res.json())
             .then(data => {
                 setPosts(data);
@@ -44,7 +44,7 @@ const MainPage = ({ user }) => {
                 };
                 setIsLoading(false);
                 if (url) {
-                    axios.patch(`http://localhost:5000/userUpdates/${identifier}`, userData);
+                    axios.patch(`https://twitter-clone2-0-hfe5.onrender.com/userUpdates/${identifier}`, userData);
                 }
             });
     };
@@ -65,7 +65,7 @@ const MainPage = ({ user }) => {
                 };
                 setIsLoading(false);
                 if (url) {
-                    axios.patch(`http://localhost:5000/userUpdates/${identifier}`, userData);
+                    axios.patch(`https://twitter-clone2-0-hfe5.onrender.com/userUpdates/${identifier}`, userData);
                 }
             });
     };
